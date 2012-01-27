@@ -8,6 +8,11 @@ public class App extends DroidGap {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        // Set a property to load the splash image before loading the URL
+        super.setIntegerProperty("splashscreen", R.drawable.splash);
+        
+        // Load the URL (page) that starts the app
         super.loadUrl("https://www.dev.plymouth.edu/webapp/mobile");
     }
 }
