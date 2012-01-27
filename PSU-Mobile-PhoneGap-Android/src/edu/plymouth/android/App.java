@@ -13,6 +13,7 @@ public class App extends DroidGap {
         super.setIntegerProperty("splashscreen", R.drawable.splash);
         
         // Load the URL (page) that starts the app
-        super.loadUrl("https://www.dev.plymouth.edu/webapp/mobile");
+        // The second parameter is the amount of time that should pass before the URL is actually loaded... effectively the splash screen show time
+        super.loadUrl("https://www.dev.plymouth.edu/webapp/mobile", 2000);
     }
 }
