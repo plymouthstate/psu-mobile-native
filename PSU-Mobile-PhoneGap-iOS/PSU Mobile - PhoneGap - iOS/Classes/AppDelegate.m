@@ -97,9 +97,27 @@
  */
 - (BOOL)webView:(UIWebView *)theWebView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
-	return [ super webView:theWebView shouldStartLoadWithRequest:request navigationType:navigationType ];
-}
+	NSURL *url = [request URL];
 
+	if( ([[url scheme] isEqualToString:@"http"] || [[url scheme] isEqualToString:@"https"]))
+	{
+
+		NSLog([url host],"");
+		if([[url host] rangeOfString:@"plymouth.edu"].location != NSNotFound){
+			NSLog([url host],"");
+			return YES;
+		} else {
+			[[UIApplication sharedApplication] openURL:url];
+			return NO;
+		}
+	}
+
+	else
+	{
+
+		return [ super webView:theWebView shouldStartLoadWithRequest:request navigationType:navigationType ];
+	}
+}
 
 - (BOOL) execute:(InvokedUrlCommand*)command
 {
