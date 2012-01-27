@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		1B29AC7014D327BA007CCE6E /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
-		1BE1CA1014D31A9000A1A6AF /* PSU Mobile - PhoneGap - iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PSU Mobile - PhoneGap - iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BE1CA1014D31A9000A1A6AF /* PSU Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PSU Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE1CA1414D31A9000A1A6AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1BE1CA1614D31A9000A1A6AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1BE1CA1814D31A9000A1A6AF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -111,12 +111,15 @@
 				1BE1CA1314D31A9000A1A6AF /* Frameworks */,
 				1BE1CA1114D31A9000A1A6AF /* Products */,
 			);
+			indentWidth = 5;
 			sourceTree = "<group>";
+			tabWidth = 5;
+			usesTabs = 1;
 		};
 		1BE1CA1114D31A9000A1A6AF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1BE1CA1014D31A9000A1A6AF /* PSU Mobile - PhoneGap - iOS.app */,
+				1BE1CA1014D31A9000A1A6AF /* PSU Mobile.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -249,7 +252,7 @@
 			);
 			name = "PSU Mobile - PhoneGap - iOS";
 			productName = "PSU Mobile - PhoneGap - iOS";
-			productReference = 1BE1CA1014D31A9000A1A6AF /* PSU Mobile - PhoneGap - iOS.app */;
+			productReference = 1BE1CA1014D31A9000A1A6AF /* PSU Mobile.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -427,7 +430,7 @@
 					"-weak_library",
 					/usr/lib/libSystem.B.dylib,
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "PSU Mobile";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -454,7 +457,7 @@
 					"-weak_library",
 					/usr/lib/libSystem.B.dylib,
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "PSU Mobile";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
