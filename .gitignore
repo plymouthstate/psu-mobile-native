@@ -3,3 +3,8 @@
 .DS_Store*
 ehthumbs.db
 Thumbs.db
+
+# Xcode generated files #
+#########################
+*.xcworkspace
+
