@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B29AC7114D327BA007CCE6E /* www in Resources */ = {isa = PBXBuildFile; fileRef = 1B29AC7014D327BA007CCE6E /* www */; };
 		1BE1CA1514D31A9000A1A6AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE1CA1414D31A9000A1A6AF /* Foundation.framework */; };
 		1BE1CA1714D31A9000A1A6AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE1CA1614D31A9000A1A6AF /* UIKit.framework */; };
 		1BE1CA1914D31A9100A1A6AF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE1CA1814D31A9000A1A6AF /* CoreGraphics.framework */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B29AC7014D327BA007CCE6E /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
 		1BE1CA1014D31A9000A1A6AF /* PSU Mobile - PhoneGap - iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PSU Mobile - PhoneGap - iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE1CA1414D31A9000A1A6AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1BE1CA1614D31A9000A1A6AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -104,6 +106,7 @@
 		1BE1CA0214D31A9000A1A6AF = {
 			isa = PBXGroup;
 			children = (
+				1B29AC7014D327BA007CCE6E /* www */,
 				1BE1CA2E14D31A9100A1A6AF /* PSU Mobile - PhoneGap - iOS */,
 				1BE1CA1314D31A9000A1A6AF /* Frameworks */,
 				1BE1CA1114D31A9000A1A6AF /* Products */,
@@ -290,6 +293,7 @@
 				1BE1CA4D14D31A9100A1A6AF /* Default@2x.png in Resources */,
 				1BE1CA4F14D31A9100A1A6AF /* Capture.bundle in Resources */,
 				1BE1CA5114D31A9100A1A6AF /* PhoneGap.plist in Resources */,
+				1B29AC7114D327BA007CCE6E /* www in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +480,7 @@
 				1BE1CA5C14D31A9100A1A6AF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
