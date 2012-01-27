@@ -14,7 +14,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1BE1CA0F14D31A9000A1A6AF"
-               BuildableName = "PSU Mobile - PhoneGap - iOS.app"
+               BuildableName = "PSU Mobile.app"
                BlueprintName = "PSU Mobile - PhoneGap - iOS"
                ReferencedContainer = "container:PSU Mobile - PhoneGap - iOS.xcodeproj">
             </BuildableReference>
@@ -32,7 +32,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1BE1CA0F14D31A9000A1A6AF"
-            BuildableName = "PSU Mobile - PhoneGap - iOS.app"
+            BuildableName = "PSU Mobile.app"
             BlueprintName = "PSU Mobile - PhoneGap - iOS"
             ReferencedContainer = "container:PSU Mobile - PhoneGap - iOS.xcodeproj">
          </BuildableReference>
@@ -50,7 +50,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1BE1CA0F14D31A9000A1A6AF"
-            BuildableName = "PSU Mobile - PhoneGap - iOS.app"
+            BuildableName = "PSU Mobile.app"
             BlueprintName = "PSU Mobile - PhoneGap - iOS"
             ReferencedContainer = "container:PSU Mobile - PhoneGap - iOS.xcodeproj">
          </BuildableReference>
@@ -68,7 +68,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1BE1CA0F14D31A9000A1A6AF"
-            BuildableName = "PSU Mobile - PhoneGap - iOS.app"
+            BuildableName = "PSU Mobile.app"
             BlueprintName = "PSU Mobile - PhoneGap - iOS"
             ReferencedContainer = "container:PSU Mobile - PhoneGap - iOS.xcodeproj">
          </BuildableReference>
