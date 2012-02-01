@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<widget xmlns		= "http://www.w3.org/ns/widgets"
-	xmlns:gap		= "http://phonegap.com/ns/1.0"
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0"
 	id			= "edu.plymouth.mobile.phonegap.psu-mobile"
-	version 		= "0.1.0"
-	versionCode 	= "1"> <!-- For Android. This integer must be incremented on each update to the market -->
+	version		= "0.1.0"
+	versionCode	= "1"> <!-- For Android. This integer must be incremented on each update to the market -->
 
 	<!-- For Documentation: https://build.phonegap.com/docs/config-xml -->
 
@@ -13,8 +12,7 @@
 		Stay connected with Plymouth State University.
 	</description>
 
-	<author href	= "http://www.plymouth.edu/"
-		email	= "psumisteam@gmail.com">
+	<author href="http://www.plymouth.edu/" email="psumisteam@gmail.com">
 		Trevor Suarez of the MIS team and ITS Group
 	</author>
 
