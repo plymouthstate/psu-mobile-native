@@ -26,11 +26,13 @@
 		<gap:platform name="blackberry" project="widgets"/>
 	</gap:platforms>
 
+	<icon src="www/images/low/appicon.png" />
 	<icon src="www/images/low/appicon.png" width="50" height="50" />
 	<icon src="www/images/medium/appicon.png" width="57" height="57" />
 	<icon src="www/images/high/appicon.png" width="72" height="72" />
 	<icon src="www/images/xhigh/appicon.png" width="114" height="114" />
 
+	<gap:splash src="www/images/low/splash.png" />
 	<gap:splash src="www/images/low/splash.png" width="240" height="400" />
 	<gap:splash src="www/images/medium/splash.png" width="320" height="534" />
 	<gap:splash src="www/images/high/splash.png" width="480" height="800" />
