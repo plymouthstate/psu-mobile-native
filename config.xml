@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns		= "http://www.w3.org/ns/widgets"
+	xmlns:gap		= "http://phonegap.com/ns/1.0"
+	id			= "edu.plymouth.mobile.phonegap.psu-mobile"
+	version 		= "0.1.0"
+	versionCode 	= "1"> <!-- For Android. This integer must be incremented on each update to the market -->
+
+	<!-- For Documentation: https://build.phonegap.com/docs/config-xml -->
+
+	<name>PSU Mobile</name>
+
+	<description>
+		Stay connected with Plymouth State University.
+	</description>
+
+	<author href	= "http://www.plymouth.edu/"
+		email	= "psumisteam@gmail.com">
+		Trevor Suarez of the MIS team and ITS Group
+	</author>
+
+	<gap:platforms>
+		<gap:platform name="android" minVersion="2.2" />
+		<gap:platform name="ios" minVersion="4" />
+		<gap:platform name="webos" />
+		<gap:platform name="symbian.wrt" />
+		<gap:platform name="blackberry" project="widgets"/>
+	</gap:platforms>
+
+	<icon src="images/low/appicon.png" width="50" height="50" />
+	<icon src="images/medium/appicon.png" width="57" height="57" />
+	<icon src="images/high/appicon.png" width="72" height="72" />
+	<icon src="images/xhigh/appicon.png" width="114" height="114" />
+
+	<gap:splash src="images/low/splash.png" width="240" height="400" />
+	<gap:splash src="images/medium/splash.png" width="320" height="534" />
+	<gap:splash src="images/high/splash.png" width="480" height="800" />
+	<gap:splash src="images/xhigh/splash.png" width="576" height="960" />
+	<gap:splash src="images/ios-splash/splash.png" width="320" height="240" />
+	<gap:splash src="images/ios-splash/splash.png" width="640" height="960" />
+
+	<feature name="http://api.phonegap.com/1.0/battery"/>
+	<feature name="http://api.phonegap.com/1.0/camera"/>
+	<feature name="http://api.phonegap.com/1.0/contacts"/>
+	<feature name="http://api.phonegap.com/1.0/file"/>
+	<feature name="http://api.phonegap.com/1.0/geolocation"/>
+	<feature name="http://api.phonegap.com/1.0/media"/>
+	<feature name="http://api.phonegap.com/1.0/network"/>
+	<feature name="http://api.phonegap.com/1.0/notification"/>
+
+	<preference name="target-device" value="universal" />
+	<preference name="orientation" value="default" />
+	<preference name="fullscreen" value="false" />
+	<preference name="webviewbounce" value="false" />
+	<preference name="prerendered-icon" value="true" />
+</widget>
