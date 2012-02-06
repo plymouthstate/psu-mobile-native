@@ -8,3 +8,6 @@ Thumbs.db
 #########################
 *.xcworkspace
 
+# SASS generated files #
+########################
+.sass-cache

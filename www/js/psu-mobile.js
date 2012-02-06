@@ -14,6 +14,9 @@
 	function userOffline(detectedStyle) {
 		// Set a default value
 		detectedStyle = detectedStyle || 'hard';
+
+		// The user is offline, so let's redirect them to the offline page
+		window.location.href = 'offline.html';
 	}
 
 	// Function to check connection by making an AJAX request to the webapp and checking for a response
@@ -59,4 +62,7 @@
 			checkConnection();
 		}
 	});
+
+	// Show the loading message
+	$('h1#loading-message').fadeIn(700);
 })(jQuery);

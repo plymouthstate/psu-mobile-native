@@ -1,0 +1,78 @@
+/* CSS Variables for SASS */
+$psu_color: #013D2E;
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	background-color: #000;
+	position: relative;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+div#main-container {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	background-color: $psu_color;
+	background-image: url(images/xhigh/splash.png);
+	background-size: 100% 100%; // Stretch the image across the entire background
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+
+	/* Images depending on screen density */
+	/* Extra high - 2 times */
+	@media screen and (-webkit-device-pixel-ratio: 2) {
+		background-image: url(images/xhigh/splash.png);
+	}   
+	/* High - 1.5 times */
+	@media screen and (-webkit-device-pixel-ratio: 1.5) {
+		background-image: url(images/high/splash.png);
+	}   
+	/* Medium/Normal - 1.0 times */
+	@media screen and (-webkit-device-pixel-ratio: 1.0) {
+		background-image: url(images/medium/splash.png);
+	}   
+	/* Low - 0.75 times */
+	@media screen and (-webkit-device-pixel-ratio: 0.75) {
+		background-image: url(images/low/splash.png);
+	}
+
+	h1#loading-message {
+		display: none;
+		width: 100%;
+		margin: 0px;
+		margin-bottom: 20px;
+		padding: 0px;
+		position: absolute;
+		bottom: 0px;
+		font-size: 20px;
+		font-weight: normal;
+		letter-spacing: 1px;
+		text-align: center;
+		color: #ccc;
+		text-shadow: 1px 0px 0px #000;
+	}
+}
+
+html.ios {
+	/* Images depending on screen density */
+	/* Extra high - 2 times */
+	@media screen and (-webkit-device-pixel-ratio: 2) {
+		background-image: url(images/ios-splash/splash-retina.png);
+	}   
+	/* Medium/Normal - 1.0 times */
+	@media screen and (-webkit-device-pixel-ratio: 1.0) {
+		background-image: url(images/ios-splash/splash.png);
+	}   
+}
