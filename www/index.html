@@ -42,8 +42,14 @@
 	</div>
 
 	<!-- JavaScript at the bottom for faster page loading -->
-	
-	<script src="js/phonegap-1.3.0.js"></script>
+
+	<!-- Load the PhoneGap JavaScript files -->
+	<script id="phonegap-js" src="js/phonegap-1.3.0.js"></script>
+	<script>
+		if (typeof deviceOS !== 'undefined' && deviceOS != 'other') {
+			document.getElementById('phonegap-js').src = 'js/phonegap-1.3.0_' + deviceOS + '.js';
+		}
+	</script>
 
 	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
