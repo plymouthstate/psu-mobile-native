@@ -42,6 +42,7 @@
 		var testRequest = $.ajax({
 			url:		appURL,
 			type:	'HEAD',
+			timeout:	800,
 			async:	true,
 			cache:	false
 		});
