@@ -15,16 +15,35 @@
 		// Set a default value
 		detectedStyle = detectedStyle || 'hard';
 
-		// The user is offline, so let's redirect them to the offline page
-		window.location.href = 'offline.html';
+		// Set message variables
+		if (detectedStyle == 'soft') {
+			var messageTitle = 'Connection Error';
+			var messageText = 'Unfortunately, we were unable to connect to Plymouth\'s servers';
+		}
+		else {
+			var messageTitle = 'Connection Error';
+			var messageText = 'There is no internet connection at this time';
+		}
+
+		// Notify the user that they're offline
+		navigator.notification.confirm(
+			messageText,	// Message text
+			function (choiceIndex) {
+				console.log(choiceIndex);
+			},
+			messageTitle,
+			'Try Again,Exit'
+		);
 	}
 
 	// Function to check connection by making an AJAX request to the webapp and checking for a response
 	function checkConnection() {
 		// Create an AJAX request
 		var testRequest = $.ajax({
-			url: appURL,
-			cache: false
+			url:		appURL,
+			type:	'HEAD',
+			async:	true,
+			cache:	false
 		});
 
 		// If successful
@@ -48,9 +67,18 @@
 
 	// Let's listen for when PhoneGap has correctly loaded
 	// THEN we'll run our PhoneGap dependent code
-	document.addEventListener('deviceready', function () {
+	$(document).on('deviceready', function () {
 		// Get the network's state
-		var networkState = navigator.network.connection.type;
+		try { // Use a try, in case we're testing on a desktop browser that this object doesn't exist on
+			var networkState = navigator.network.connection.type;
+		}
+		catch (e) {
+			console.log(e);
+		}
+		finally {
+			// Let's set some testing variables
+			var networkState = true;
+		}
 
 		// If the user is offline
 		if (networkState == Connection.UNKNOWN || networkState == Connection.NONE) {
