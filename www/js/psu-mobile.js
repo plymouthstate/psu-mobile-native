@@ -49,7 +49,7 @@
 		var testRequest = $.ajax({
 			url:		appURL,
 			type:	'HEAD',
-			timeout:	800,
+			timeout:	3000, // Give it a reasonable amount of time to check the connection
 			async:	true,
 			cache:	false
 		});
@@ -77,19 +77,22 @@
 	// THEN we'll run our PhoneGap dependent code
 	document.addEventListener('deviceready', function () { // Don't use a jQuery event listener here. PhoneGap will shit itself.
 		// Get the network's state
-		try { // Use a try, in case we're testing on a desktop browser that this object doesn't exist on
+		// Use a try, in case we're testing on a desktop browser that this object doesn't exist on. Or in case the feature hasn't been implemented in the client browser.
+		try {
 			var networkState = navigator.network.connection.type;
+			var html5Check	= (navigator.hasOwnProperty('onLine') && navigator.onLine);
+			var phonegapCheck = (networkState != Connection.UNKNOWN && networkState != Connection.NONE);
+
+			console.log('HTML5 OnLine: ' + html5Check);
+			console.log('PhoneGap OnLine: ' + phonegapCheck);
 		}
 		catch (e) {
 			console.log(e);
 		}
-		finally {
-			// Let's set some testing variables
-			var networkState = true;
-		}
 
 		// If the user is offline
-		if (networkState == Connection.UNKNOWN || networkState == Connection.NONE) {
+		if (!html5Check || !phonegapCheck) {
+			console.log('User is offline');
 			userOffline();
 		}
 		else {
