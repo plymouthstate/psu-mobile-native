@@ -81,8 +81,11 @@
 		try {
 			var networkState = navigator.network.connection.type;
 			var html5Check	= (navigator.hasOwnProperty('onLine') && navigator.onLine);
-			var phonegapCheck = (networkState != Connection.UNKNOWN && networkState != Connection.NONE);
+			var phonegapCheck = (networkState != Connection.UNKNOWN && networkState != Connection.NONE && networkState !== null); // Sometimes returns null when disconnected
 
+			console.log(networkState);
+			console.log(navigator.onLine);
+			
 			console.log('HTML5 OnLine: ' + html5Check);
 			console.log('PhoneGap OnLine: ' + phonegapCheck);
 		}
