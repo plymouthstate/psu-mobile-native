@@ -27,12 +27,19 @@
 
 		// Notify the user that they're offline
 		navigator.notification.confirm(
-			messageText,	// Message text
+			messageText,		// Message text
 			function (choiceIndex) {
-				console.log(choiceIndex);
+				// If the user chose the first option
+				if (choiceIndex == 1) {
+					// They chose to try again. So let's do it.
+					checkConnection();
+				}
+				else {
+					navigator.app.exitApp();
+				}
 			},
-			messageTitle,
-			'Try Again,Exit'
+			messageTitle,		// Message title
+			'Try Again,Exit'	// The button titles (1-based indexed)
 		);
 	}
 
@@ -68,7 +75,7 @@
 
 	// Let's listen for when PhoneGap has correctly loaded
 	// THEN we'll run our PhoneGap dependent code
-	$(document).on('deviceready', function () {
+	document.addEventListener('deviceready', function () { // Don't use a jQuery event listener here. PhoneGap will shit itself.
 		// Get the network's state
 		try { // Use a try, in case we're testing on a desktop browser that this object doesn't exist on
 			var networkState = navigator.network.connection.type;
