@@ -48,20 +48,28 @@ div#main-container {
 		background-image: url(images/low/splash.png);
 	}
 
-	h1#loading-message {
+	h1#loading-message, h2#loading-error {
 		display: none;
 		width: 100%;
 		margin: 0px;
-		margin-bottom: 20px;
-		padding: 0px;
 		position: absolute;
 		bottom: 0px;
-		font-size: 20px;
-		font-weight: normal;
-		letter-spacing: 1px;
 		text-align: center;
-		color: #ccc;
+		font-weight: normal;
 		text-shadow: 1px 0px 0px #000;
+	}
+	h1#loading-message {
+		margin-bottom: 20px;
+		padding: 0px;
+		font-size: 20px;
+		letter-spacing: 1px;
+		color: #ccc;
+	}
+	h2#loading-error {
+		padding: 12px 0px;
+		background-color: #922;
+		font-size: 14px;
+		color: #fff;
 	}
 }
 

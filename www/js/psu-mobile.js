@@ -10,6 +10,9 @@
 	// Set the webapp URL as a variable
 	var appURL = 'https://www.dev.plymouth.edu/webapp/psu-mobile/';
 
+	// Set the animation speed
+	var animationSpeed = 700; // milliseconds
+
 	// Function to handle when a user is offline
 	function userOffline(detectedStyle) {
 		// Set a default value
@@ -18,33 +21,24 @@
 		// Set message variables
 		if (detectedStyle == 'soft') {
 			var messageTitle = 'Connection Error';
-			var messageText = 'Unfortunately, we were unable to connect to Plymouth\'s servers';
+			var messageText = 'Unable to connect to Plymouth\'s servers';
 		}
 		else {
 			var messageTitle = 'Connection Error';
 			var messageText = 'There is no internet connection at this time';
 		}
 
-		// Notify the user that they're offline
-		navigator.notification.confirm(
-			messageText,		// Message text
-			function (choiceIndex) {
-				// If the user chose the first option
-				if (choiceIndex == 1) {
-					// They chose to try again. So let's do it.
-					checkConnection();
-				}
-				else {
-					navigator.app.exitApp();
-				}
-			},
-			messageTitle,		// Message title
-			'Try Again,Exit'	// The button titles (1-based indexed)
-		);
+		// Hide the loading message and show the error
+		$('h1#loading-message').fadeOut(animationSpeed);
+		$('h2#loading-error').text(messageText).fadeIn(animationSpeed);
 	}
 
 	// Function to check connection by making an AJAX request to the webapp and checking for a response
 	function checkConnection() {
+		// Hide the error and show the loading message
+		$('h2#loading-error').fadeOut(animationSpeed);
+		$('h1#loading-message').fadeIn(animationSpeed);
+
 		// Create an AJAX request
 		var testRequest = $.ajax({
 			url:		appURL,
@@ -76,6 +70,8 @@
 	// Let's listen for when PhoneGap has correctly loaded
 	// THEN we'll run our PhoneGap dependent code
 	document.addEventListener('deviceready', function () { // Don't use a jQuery event listener here. PhoneGap will shit itself.
+		console.log('DEVICEREADY event fired. PhoneGap has been initialized');
+
 		// Get the network's state
 		// Use a try, in case we're testing on a desktop browser that this object doesn't exist on. Or in case the feature hasn't been implemented in the client browser.
 		try {
@@ -103,8 +99,26 @@
 			// We want the user to have a clean error if they can't access the webapp
 			checkConnection();
 		}
+
+		// Let's listen for when the device has lost connection
+		document.addEventListener('offline', function () {
+			console.log('OFFLINE event fired. User is offline');
+			userOffline();
+		}, false);
+
+		// Let's listen for when the device has come online
+		document.addEventListener('online', function () {
+			console.log('ONLINE event fired. User is online');
+			checkConnection();
+		}, false);
+
+		// Let's listen for when the app has been resumed/focused
+		document.addEventListener('resume', function () {
+			console.log('RESUME event fired. App has been resumed');
+			checkConnection();
+		}, false);
 	});
 
-	// Show the loading message
-	$('h1#loading-message').fadeIn(700);
+	// Show the loading message quickly
+	$('h1#loading-message').fadeIn(animationSpeed);
 })(jQuery);
