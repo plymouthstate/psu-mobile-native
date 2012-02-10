@@ -8,7 +8,7 @@
 	}
 
 	// Set the webapp URL as a variable
-	var appURL = 'https://www.dev.plymouth.edu/webapp/psu-mobile/?phonegap';
+	var appURL = 'https://www.dev.plymouth.edu/webapp/psu-mobile/?phonegap&client-app-version=0.4.1';
 
 	// Set the animation speed
 	var animationSpeed = 700; // milliseconds
