@@ -419,6 +419,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PSU Mobile - PhoneGap - iOS/PSU Mobile - PhoneGap - iOS-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = "PSU Mobile - PhoneGap - iOS/PSU Mobile - PhoneGap - iOS-Info.plist";
 				OTHER_LDFLAGS = (
 					"-weak_framework",
@@ -446,6 +447,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PSU Mobile - PhoneGap - iOS/PSU Mobile - PhoneGap - iOS-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = "PHONEGAP_FRAMEWORK=YES";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = "PSU Mobile - PhoneGap - iOS/PSU Mobile - PhoneGap - iOS-Info.plist";
 				OTHER_LDFLAGS = (
 					"-weak_framework",
