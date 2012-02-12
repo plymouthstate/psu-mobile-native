@@ -8,7 +8,7 @@
 	}
 
 	// Set the webapp URL as a variable
-	var appURL = 'https://www.dev.plymouth.edu/webapp/psu-mobile/?phonegap&client-app-version=0.4.1';
+	var appURL = 'https://www.dev.plymouth.edu/webapp/psu-mobile/?client-app=0.4.1';
 
 	// Set the animation speed
 	var animationSpeed = 700; // milliseconds
@@ -63,6 +63,7 @@
 
 		// Regardless
 		testRequest.always(function (jqXHR, textStatus) {
+			console.log('AJAX - Attempting to Load: ' + appURL);
 			console.log('Connection Check: ' + textStatus);
 		});
 	}
@@ -71,6 +72,9 @@
 	// THEN we'll run our PhoneGap dependent code
 	document.addEventListener('deviceready', function () { // Don't use a jQuery event listener here. PhoneGap will shit itself.
 		console.log('DEVICEREADY event fired. PhoneGap has been initialized');
+
+		// Add the phonegap version to the appURL, so that the remote web app can use the information
+		appURL += '&phonegap=' + device.phonegap;
 
 		// Get the network's state
 		// Use a try, in case we're testing on a desktop browser that this object doesn't exist on. Or in case the feature hasn't been implemented in the client browser.
