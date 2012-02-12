@@ -51,7 +51,7 @@
 		// If successful
 		testRequest.done(function () {
 			// If the connection checked out, let's load up the webapp
-			window.location.href = appURL;
+			navigator.app.loadUrl(appURL);
 			console.log('success');
 		});
 
