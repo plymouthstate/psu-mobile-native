@@ -51,7 +51,14 @@
 		// If successful
 		testRequest.done(function () {
 			// If the connection checked out, let's load up the webapp
-			navigator.app.loadUrl(appURL);
+			if (device.platform === 'Android') {
+				// Use the loadUrl function on Android to properly inject PhoneGap's API's into the external page
+				navigator.app.loadUrl(appURL);
+			}
+			else {
+				window.location.href = appURL;
+			}
+
 			console.log('success');
 		});
 
