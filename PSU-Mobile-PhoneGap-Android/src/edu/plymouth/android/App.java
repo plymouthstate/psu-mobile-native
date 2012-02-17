@@ -18,7 +18,7 @@ public class App extends DroidGap {
         
         // Load the local asset url.
         // Uncomment the OS-specific folder (symlink)
-        //super.loadUrl("file:///android_asset/www/index.html", 750);				// Unix like / Mac OS X
-        super.loadUrl("file:///android_asset/www_windows/index.html", 750); 	// Windows
+        super.loadUrl("file:///android_asset/www/index.html", 750);				// Unix like / Mac OS X
+        //super.loadUrl("file:///android_asset/www_windows/index.html", 750); 	// Windows
     }
 }
