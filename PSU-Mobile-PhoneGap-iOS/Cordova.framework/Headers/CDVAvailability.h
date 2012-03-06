@@ -17,32 +17,24 @@
  under the License.
  */
 
-//
-//  AppDelegate.h
-//  Test
-//
-//  Created by Trevor Suarez on 3/6/12.
-//  Copyright __MyCompanyName__ 2012. All rights reserved.
-//
-
-#import <UIKit/UIKit.h>
-
-#import "CDVDeprecated.h"
+#define __CORDOVA_0_9_6  00906
+#define __CORDOVA_1_0_0  10000
+#define __CORDOVA_1_1_0  10100
+#define __CORDOVA_1_2_0  10200
+#define __CORDOVA_1_3_0  10300
+#define __CORDOVA_1_4_0  10400
+#define __CORDOVA_1_4_1  10401
+#define __CORDOVA_1_5_0  10500
+#define __CORDOVA_NA     99999  /* not available */
 
 
-@interface AppDelegate : NSObject < UIApplicationDelegate, UIWebViewDelegate, PGCommandDelegate > {
-
-	NSString* invokeString;
-}
-
-// invoke string is passed to your app on launch, this is only valid if you 
-// edit FooBar.plist to add a protocol
-// a simple tutorial can be found here : 
-// http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
-
-@property (nonatomic, copy)  NSString* invokeString;
-@property (nonatomic, retain) IBOutlet UIWindow* window;
-@property (nonatomic, retain) IBOutlet PGViewController* viewController;
-
-@end
-
+/*
+ #if CORDOVA_VERSION_MIN_REQUIRED >= __CORDOVA_1_5_0
+    // do something when its at least 1.5.0
+ #else
+    // do something else (non 1.5.0)
+ #endif
+ */
+#ifndef CORDOVA_VERSION_MIN_REQUIRED
+    #define CORDOVA_VERSION_MIN_REQUIRED __CORDOVA_1_5_0
+#endif

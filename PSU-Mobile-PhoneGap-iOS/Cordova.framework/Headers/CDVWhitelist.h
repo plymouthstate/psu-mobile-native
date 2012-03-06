@@ -17,32 +17,17 @@
  under the License.
  */
 
-//
-//  AppDelegate.h
-//  Test
-//
-//  Created by Trevor Suarez on 3/6/12.
-//  Copyright __MyCompanyName__ 2012. All rights reserved.
-//
+#import <Foundation/Foundation.h>
 
-#import <UIKit/UIKit.h>
+@interface CDVWhitelist : NSObject
 
-#import "CDVDeprecated.h"
+@property (nonatomic, readonly, retain) NSArray* whitelist;
+@property (nonatomic, readonly, retain) NSArray* expandedWhitelist;
+@property (nonatomic, readonly, assign) BOOL allowAll;
 
-
-@interface AppDelegate : NSObject < UIApplicationDelegate, UIWebViewDelegate, PGCommandDelegate > {
-
-	NSString* invokeString;
-}
-
-// invoke string is passed to your app on launch, this is only valid if you 
-// edit FooBar.plist to add a protocol
-// a simple tutorial can be found here : 
-// http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
-
-@property (nonatomic, copy)  NSString* invokeString;
-@property (nonatomic, retain) IBOutlet UIWindow* window;
-@property (nonatomic, retain) IBOutlet PGViewController* viewController;
+- (id) initWithArray:(NSArray*)array;
+- (BOOL) URLIsAllowed:(NSURL*)url;
+- (BOOL) schemeIsAllowed:(NSString*)scheme;
+- (NSString*) errorStringForURL:(NSURL*)url;
 
 @end
-

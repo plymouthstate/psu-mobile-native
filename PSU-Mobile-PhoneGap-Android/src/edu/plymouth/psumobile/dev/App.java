@@ -1,7 +1,7 @@
 package edu.plymouth.psumobile.dev;
 
 import android.os.Bundle;
-import com.phonegap.*;
+import org.apache.cordova.*;
 
 public class App extends DroidGap {
     /** Called when the activity is first created. */

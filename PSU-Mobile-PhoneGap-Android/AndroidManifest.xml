@@ -40,7 +40,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.phonegap.DroidGap"
+            android:name="org.apache.cordova.DroidGap"
             android:label="@string/app_name"
             android:configChanges="orientation|keyboardHidden">
             <intent-filter>

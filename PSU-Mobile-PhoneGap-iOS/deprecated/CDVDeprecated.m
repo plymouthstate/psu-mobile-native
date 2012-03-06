@@ -17,32 +17,24 @@
  under the License.
  */
 
+//  CDVDeprecated.m
+//  Apache Cordova
 //
-//  AppDelegate.h
-//  Test
+//  Bridge implementation file for Cordova 1.5 upgrades.
 //
-//  Created by Trevor Suarez on 3/6/12.
-//  Copyright __MyCompanyName__ 2012. All rights reserved.
-//
-
-#import <UIKit/UIKit.h>
 
 #import "CDVDeprecated.h"
 
+@implementation PGPlugin
+@end
 
-@interface AppDelegate : NSObject < UIApplicationDelegate, UIWebViewDelegate, PGCommandDelegate > {
+@implementation PGViewController
+@end
 
-	NSString* invokeString;
-}
 
-// invoke string is passed to your app on launch, this is only valid if you 
-// edit FooBar.plist to add a protocol
-// a simple tutorial can be found here : 
-// http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
+@implementation PGURLProtocol
+@end
 
-@property (nonatomic, copy)  NSString* invokeString;
-@property (nonatomic, retain) IBOutlet UIWindow* window;
-@property (nonatomic, retain) IBOutlet PGViewController* viewController;
-
+@implementation InvokedUrlCommand
 @end
 
