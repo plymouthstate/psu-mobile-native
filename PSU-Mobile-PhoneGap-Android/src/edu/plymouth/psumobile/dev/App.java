@@ -1,4 +1,4 @@
-package edu.plymouth.psumobile;
+package edu.plymouth.psumobile.dev;
 
 import android.os.Bundle;
 import com.phonegap.*;

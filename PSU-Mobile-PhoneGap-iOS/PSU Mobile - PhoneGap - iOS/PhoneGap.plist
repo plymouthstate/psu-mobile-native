@@ -51,6 +51,8 @@
 		<string>PGSound</string>
 		<key>com.phonegap.mediacapture</key>
 		<string>PGCapture</string>
+		<key>com.phonegap.battery</key>
+		<string>PGBattery</string>
 		<key>com.phonegap.splashscreen</key>
 		<string>PGSplashScreen</string>
 	</dict>

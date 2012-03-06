@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1B29AC7114D327BA007CCE6E /* www in Resources */ = {isa = PBXBuildFile; fileRef = 1B29AC7014D327BA007CCE6E /* www */; };
+		1B432BDB15069E6E005125D1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B432BD715069E6E005125D1 /* AppDelegate.m */; };
+		1B432BDC15069E6E005125D1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B432BD915069E6E005125D1 /* MainViewController.m */; };
+		1B432BDD15069E6E005125D1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B432BDA15069E6E005125D1 /* MainViewController.xib */; };
 		1BE1CA1514D31A9000A1A6AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE1CA1414D31A9000A1A6AF /* Foundation.framework */; };
 		1BE1CA1714D31A9000A1A6AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE1CA1614D31A9000A1A6AF /* UIKit.framework */; };
 		1BE1CA1914D31A9100A1A6AF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE1CA1814D31A9000A1A6AF /* CoreGraphics.framework */; };
@@ -32,11 +35,15 @@
 		1BE1CA4D14D31A9100A1A6AF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BE1CA4C14D31A9100A1A6AF /* Default@2x.png */; };
 		1BE1CA4F14D31A9100A1A6AF /* Capture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1BE1CA4E14D31A9100A1A6AF /* Capture.bundle */; };
 		1BE1CA5114D31A9100A1A6AF /* PhoneGap.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1BE1CA5014D31A9100A1A6AF /* PhoneGap.plist */; };
-		1BE1CA5514D31A9100A1A6AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE1CA5414D31A9100A1A6AF /* AppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1B29AC7014D327BA007CCE6E /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		1B432BD615069E6E005125D1 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		1B432BD715069E6E005125D1 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
+		1B432BD815069E6E005125D1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Classes/MainViewController.h; sourceTree = "<group>"; };
+		1B432BD915069E6E005125D1 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Classes/MainViewController.m; sourceTree = "<group>"; };
+		1B432BDA15069E6E005125D1 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainViewController.xib; path = Classes/MainViewController.xib; sourceTree = "<group>"; };
 		1BE1CA1014D31A9000A1A6AF /* PSU Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PSU Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE1CA1414D31A9000A1A6AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1BE1CA1614D31A9000A1A6AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -64,8 +71,6 @@
 		1BE1CA4C14D31A9100A1A6AF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/splash/Default@2x.png"; sourceTree = "<group>"; };
 		1BE1CA4E14D31A9100A1A6AF /* Capture.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Capture.bundle; path = Resources/Capture.bundle; sourceTree = "<group>"; };
 		1BE1CA5014D31A9100A1A6AF /* PhoneGap.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PhoneGap.plist; sourceTree = "<group>"; };
-		1BE1CA5314D31A9100A1A6AF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
-		1BE1CA5414D31A9100A1A6AF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
 		1BE1CA5714D31A9100A1A6AF /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +162,7 @@
 		1BE1CA2F14D31A9100A1A6AF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1B432BDA15069E6E005125D1 /* MainViewController.xib */,
 				1BE1CA3014D31A9100A1A6AF /* PSU Mobile - PhoneGap - iOS-Info.plist */,
 				1BE1CA3114D31A9100A1A6AF /* InfoPlist.strings */,
 				1BE1CA3414D31A9100A1A6AF /* main.m */,
@@ -207,8 +213,10 @@
 		1BE1CA5214D31A9100A1A6AF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1BE1CA5314D31A9100A1A6AF /* AppDelegate.h */,
-				1BE1CA5414D31A9100A1A6AF /* AppDelegate.m */,
+				1B432BD615069E6E005125D1 /* AppDelegate.h */,
+				1B432BD715069E6E005125D1 /* AppDelegate.m */,
+				1B432BD815069E6E005125D1 /* MainViewController.h */,
+				1B432BD915069E6E005125D1 /* MainViewController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -285,6 +293,7 @@
 				1BE1CA4F14D31A9100A1A6AF /* Capture.bundle in Resources */,
 				1BE1CA5114D31A9100A1A6AF /* PhoneGap.plist in Resources */,
 				1B29AC7114D327BA007CCE6E /* www in Resources */,
+				1B432BDD15069E6E005125D1 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +321,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BE1CA3514D31A9100A1A6AF /* main.m in Sources */,
-				1BE1CA5514D31A9100A1A6AF /* AppDelegate.m in Sources */,
+				1B432BDB15069E6E005125D1 /* AppDelegate.m in Sources */,
+				1B432BDC15069E6E005125D1 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
