@@ -271,7 +271,7 @@
 		1BE1CA0414D31A9000A1A6AF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 			};
 			buildConfigurationList = 1BE1CA0714D31A9000A1A6AF /* Build configuration list for PBXProject "PSU Mobile - PhoneGap - iOS" */;
 			compatibilityVersion = "Xcode 3.2";
