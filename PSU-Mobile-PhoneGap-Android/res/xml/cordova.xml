@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <phonegap>
-    <access origin="plymouth.edu" subdomains="true" />
-	<access origin="\*\" />
+    <access origin="www.plymouth.edu" subdomains="true" />
+    <access origin="www.dev.plymouth.edu" subdomains="true" />
+    <access origin="*.googleapis.com" subdomains="true" />
+    <access origin="*.aspnetcdn.com" subdomains="true" />
+    <access origin="code.jquery.com" subdomains="true" />
+    <access origin="maps.google.com" subdomains="true" />
+    <access origin="mobilemaps.clients.google.com" subdomains="true" />
+    <access origin="*.gstatic.com" subdomains="true" />
     <log level="DEBUG"/>
 </phonegap>
