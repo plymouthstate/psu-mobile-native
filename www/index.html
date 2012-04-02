@@ -47,7 +47,7 @@
 	<!-- Load the PhoneGap JavaScript files -->
 	<script>
 		if (typeof deviceOS !== 'undefined' && deviceOS != 'other') {
-			scriptName = 'js/phonegap-1.3.0_' + deviceOS + '.js';
+			scriptName = 'js/cordova-1.5.0_' + deviceOS + '.js';
 		}
 
 		// Actually write the script tag and load the JS
@@ -56,7 +56,7 @@
 
 	<!-- For PhoneGap Build -->
 	<!-- PhoneGap build automatically includes the device specific and OS specific javascript in this directory. This will overwrite the PhoneGap object safely. -->
-	<script src="phonegap.js"></script>
+	<script src="cordova.js"></script>
 
 	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>

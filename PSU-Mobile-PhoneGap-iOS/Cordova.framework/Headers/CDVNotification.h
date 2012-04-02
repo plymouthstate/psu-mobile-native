@@ -17,32 +17,25 @@
  under the License.
  */
 
-//
-//  AppDelegate.h
-//  Test
-//
-//  Created by Trevor Suarez on 3/6/12.
-//  Copyright __MyCompanyName__ 2012. All rights reserved.
-//
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioServices.h>
+#import "CDVPlugin.h"
 
-#import "CDVDeprecated.h"
-
-
-@interface AppDelegate : NSObject < UIApplicationDelegate, UIWebViewDelegate, PGCommandDelegate > {
-
-	NSString* invokeString;
+@interface CDVNotification : CDVPlugin <UIAlertViewDelegate>{
 }
 
-// invoke string is passed to your app on launch, this is only valid if you 
-// edit FooBar.plist to add a protocol
-// a simple tutorial can be found here : 
-// http://iphonedevelopertips.com/cocoa/launching-your-own-application-via-a-custom-url-scheme.html
-
-@property (nonatomic, copy)  NSString* invokeString;
-@property (nonatomic, retain) IBOutlet UIWindow* window;
-@property (nonatomic, retain) IBOutlet PGViewController* viewController;
+- (void)alert:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options; // confirm is just a variant of alert
+- (void)vibrate:(NSMutableArray*)arguments withDict:(NSMutableDictionary*)options;
 
 @end
 
+@interface CDVAlertView : UIAlertView {
+	NSString* callBackId;
+}
+@property(nonatomic, retain) NSString* callbackId;
+
+-(void) dealloc;
+
+@end

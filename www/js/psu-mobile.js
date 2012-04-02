@@ -8,7 +8,7 @@
 	}
 
 	// Set the webapp URL as a variable
-	var appURL = 'https://www.plymouth.edu/webapp/psu-mobile/?client-app=0.4.1';
+	var appURL = 'https://www.plymouth.edu/webapp/psu-mobile/?client-app=0.6.0';
 
 	// Set the animation speed
 	var animationSpeed = 700; // milliseconds
@@ -52,7 +52,7 @@
 		testRequest.done(function () {
 			// If the connection checked out, let's load up the webapp
 			if (device.platform === 'Android') {
-				// Use the loadUrl function on Android to properly inject PhoneGap's API's into the external page
+				// Use the loadUrl function on Android to properly inject Cordova's API's into the external page
 				navigator.app.loadUrl(appURL);
 			}
 			else {
@@ -75,33 +75,33 @@
 		});
 	}
 
-	// Let's listen for when PhoneGap has correctly loaded
-	// THEN we'll run our PhoneGap dependent code
-	document.addEventListener('deviceready', function () { // Don't use a jQuery event listener here. PhoneGap will shit itself.
-		console.log('DEVICEREADY event fired. PhoneGap has been initialized');
+	// Let's listen for when Cordova has correctly loaded
+	// THEN we'll run our Cordova dependent code
+	document.addEventListener('deviceready', function () { // Don't use a jQuery event listener here. Cordova will shit itself.
+		console.log('DEVICEREADY event fired. Cordova has been initialized');
 
-		// Add the phonegap version to the appURL, so that the remote web app can use the information
-		appURL += '&phonegap=' + device.phonegap;
+		// Add the cordova version to the appURL, so that the remote web app can use the information
+		appURL += '&cordova=' + device.cordova;
 
 		// Get the network's state
 		// Use a try, in case we're testing on a desktop browser that this object doesn't exist on. Or in case the feature hasn't been implemented in the client browser.
 		try {
 			var networkState = navigator.network.connection.type;
 			var html5Check	= (navigator.hasOwnProperty('onLine') && navigator.onLine);
-			var phonegapCheck = (networkState != Connection.UNKNOWN && networkState != Connection.NONE && networkState !== null); // Sometimes returns null when disconnected
+			var cordovaCheck = (networkState != Connection.UNKNOWN && networkState != Connection.NONE && networkState !== null); // Sometimes returns null when disconnected
 
 			console.log(networkState);
 			console.log(navigator.onLine);
 			
 			console.log('HTML5 OnLine: ' + html5Check);
-			console.log('PhoneGap OnLine: ' + phonegapCheck);
+			console.log('Cordova OnLine: ' + cordovaCheck);
 		}
 		catch (e) {
 			console.log(e);
 		}
 
 		// If the user is offline
-		if (!html5Check || !phonegapCheck) {
+		if (!html5Check || !cordovaCheck) {
 			console.log('User is offline');
 			userOffline();
 		}

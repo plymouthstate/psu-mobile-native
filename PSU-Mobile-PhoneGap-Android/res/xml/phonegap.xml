@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<phonegap>
-    <access origin="plymouth.edu" subdomains="true" />
-	<access origin="\*\" />
-    <log level="DEBUG"/>
-</phonegap>
