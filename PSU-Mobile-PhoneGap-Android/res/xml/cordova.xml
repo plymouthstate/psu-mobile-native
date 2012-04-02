@@ -8,5 +8,4 @@
     <access origin="maps.google.com" subdomains="true" />
     <access origin="mobilemaps.clients.google.com" subdomains="true" />
     <access origin="*.gstatic.com" subdomains="true" />
-    <log level="DEBUG"/>
 </phonegap>
