@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <phonegap>
     <access origin="www.plymouth.edu" subdomains="true" />
+    <access origin="s0.plymouth.edu" subdomains="true" />
+    <access origin="s1.plymouth.edu" subdomains="true" />
     <access origin="www.dev.plymouth.edu" subdomains="true" />
     <access origin="*.googleapis.com" subdomains="true" />
     <access origin="*.aspnetcdn.com" subdomains="true" />
