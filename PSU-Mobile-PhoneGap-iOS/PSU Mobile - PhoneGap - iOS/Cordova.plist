@@ -24,6 +24,8 @@
 	<array>
 		<string>plymouth.edu</string>
 		<string>www.plymouth.edu</string>
+		<string>s0.plymouth.edu</string>
+		<string>s1.plymouth.edu</string>
 		<string>www.dev.plymouth.edu</string>
 		<string>*.googleapis.com</string>
 		<string>*.aspnetcdn.com</string>
