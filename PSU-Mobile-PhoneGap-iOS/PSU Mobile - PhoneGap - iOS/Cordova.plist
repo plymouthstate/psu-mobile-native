@@ -33,6 +33,7 @@
 		<string>maps.google.com</string>
 		<string>mobilemaps.clients.google.com</string>
 		<string>*.gstatic.com</string>
+		<string>*.google-analytics.com</string>
 	</array>
 	<key>Plugins</key>
 	<dict>
