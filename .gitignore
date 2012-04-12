@@ -7,6 +7,7 @@ Thumbs.db
 # Xcode generated files #
 #########################
 *.xcworkspace
+xcuserdata
 
 # SASS generated files #
 ########################
