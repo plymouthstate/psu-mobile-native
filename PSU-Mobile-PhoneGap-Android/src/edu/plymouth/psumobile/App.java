@@ -1,6 +1,7 @@
 package edu.plymouth.psumobile;
 
 import android.os.Bundle;
+import edu.plymouth.psumobile.dev.R;
 import org.apache.cordova.*;
 
 public class App extends DroidGap {

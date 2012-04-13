@@ -8,7 +8,7 @@
 	}
 
 	// Set the webapp URL as a variable
-	var appURL = 'https://www.plymouth.edu/webapp/psu-mobile/?client-app=0.6.0';
+	var appURL = 'https://www.dev.plymouth.edu/webapp/psu-mobile/?client-app=0.6.2';
 
 	// Set the animation speed
 	var animationSpeed = 700; // milliseconds
