@@ -53,7 +53,10 @@
 			// If the connection checked out, let's load up the webapp
 			if (device.platform === 'Android') {
 				// Use the loadUrl function on Android to properly inject Cordova's API's into the external page
-				navigator.app.loadUrl(appURL);
+				navigator.app.loadUrl(appURL, {
+					clearHistory: true,
+					openExternal: false
+				});
 			}
 			else {
 				window.location.href = appURL;
