@@ -15,7 +15,7 @@ public class App extends DroidGap {
         // Load the local asset url.
         // The second parameter is the amount of time that should pass before the URL is actually loaded... effectively the splash screen show time
         // Uncomment the OS-specific folder (symlink)
-        super.loadUrl("file:///android_asset/www/index.html", 750);				// Unix like / Mac OS X
-        //super.loadUrl("file:///android_asset/www_windows/index.html", 750); 	// Windows
+        super.loadUrl("file:///android_asset/www/index.html", 150);				// Unix like / Mac OS X
+        //super.loadUrl("file:///android_asset/www_windows/index.html", 150); 	// Windows
     }
 }

@@ -8,7 +8,7 @@
 	}
 
 	// Set the webapp URL as a variable
-	var appURL = 'https://www.plymouth.edu/webapp/psu-mobile/?client-app=0.6.0';
+	var appURL = 'https://www.plymouth.edu/webapp/psu-mobile/?client-app=0.8.0';
 
 	// Set the animation speed
 	var animationSpeed = 700; // milliseconds
@@ -53,7 +53,10 @@
 			// If the connection checked out, let's load up the webapp
 			if (device.platform === 'Android') {
 				// Use the loadUrl function on Android to properly inject Cordova's API's into the external page
-				navigator.app.loadUrl(appURL);
+				navigator.app.loadUrl(appURL, {
+					clearHistory: true,
+					openExternal: false
+				});
 			}
 			else {
 				window.location.href = appURL;

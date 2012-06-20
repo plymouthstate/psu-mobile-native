@@ -13,6 +13,10 @@
 		1B432BDD15069E6E005125D1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B432BDA15069E6E005125D1 /* MainViewController.xib */; };
 		1B5EED591506B0E800D0F166 /* Cordova.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B5EED581506B0E800D0F166 /* Cordova.framework */; };
 		1B9677DC1506B1BC001DCD13 /* CDVDeprecated.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B9677DB1506B1BC001DCD13 /* CDVDeprecated.m */; };
+		1BC4D5B6157508D7005C97D0 /* ChildBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1BC4D5B0157508D7005C97D0 /* ChildBrowser.bundle */; };
+		1BC4D5B7157508D7005C97D0 /* ChildBrowserCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC4D5B2157508D7005C97D0 /* ChildBrowserCommand.m */; };
+		1BC4D5B8157508D7005C97D0 /* ChildBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC4D5B4157508D7005C97D0 /* ChildBrowserViewController.m */; };
+		1BC4D5B9157508D7005C97D0 /* ChildBrowserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BC4D5B5157508D7005C97D0 /* ChildBrowserViewController.xib */; };
 		1BE1CA1514D31A9000A1A6AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE1CA1414D31A9000A1A6AF /* Foundation.framework */; };
 		1BE1CA1714D31A9000A1A6AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE1CA1614D31A9000A1A6AF /* UIKit.framework */; };
 		1BE1CA1914D31A9100A1A6AF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE1CA1814D31A9000A1A6AF /* CoreGraphics.framework */; };
@@ -48,6 +52,12 @@
 		1B5EED581506B0E800D0F166 /* Cordova.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cordova.framework; path = "/Users/tnsuarez/Documents/PSU-Mobile-Native/PSU-Mobile-PhoneGap-iOS/Cordova.framework"; sourceTree = "<absolute>"; };
 		1B9677DA1506B1BC001DCD13 /* CDVDeprecated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDVDeprecated.h; sourceTree = "<group>"; };
 		1B9677DB1506B1BC001DCD13 /* CDVDeprecated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDVDeprecated.m; sourceTree = "<group>"; };
+		1BC4D5B0157508D7005C97D0 /* ChildBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ChildBrowser.bundle; sourceTree = "<group>"; };
+		1BC4D5B1157508D7005C97D0 /* ChildBrowserCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildBrowserCommand.h; sourceTree = "<group>"; };
+		1BC4D5B2157508D7005C97D0 /* ChildBrowserCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildBrowserCommand.m; sourceTree = "<group>"; };
+		1BC4D5B3157508D7005C97D0 /* ChildBrowserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChildBrowserViewController.h; sourceTree = "<group>"; };
+		1BC4D5B4157508D7005C97D0 /* ChildBrowserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChildBrowserViewController.m; sourceTree = "<group>"; };
+		1BC4D5B5157508D7005C97D0 /* ChildBrowserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildBrowserViewController.xib; sourceTree = "<group>"; };
 		1BE1CA1014D31A9000A1A6AF /* PSU Mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PSU Mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BE1CA1414D31A9000A1A6AF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1BE1CA1614D31A9000A1A6AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -237,6 +247,12 @@
 		1BE1CA5614D31A9100A1A6AF /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				1BC4D5B0157508D7005C97D0 /* ChildBrowser.bundle */,
+				1BC4D5B1157508D7005C97D0 /* ChildBrowserCommand.h */,
+				1BC4D5B2157508D7005C97D0 /* ChildBrowserCommand.m */,
+				1BC4D5B3157508D7005C97D0 /* ChildBrowserViewController.h */,
+				1BC4D5B4157508D7005C97D0 /* ChildBrowserViewController.m */,
+				1BC4D5B5157508D7005C97D0 /* ChildBrowserViewController.xib */,
 				1BE1CA5714D31A9100A1A6AF /* README */,
 			);
 			name = Plugins;
@@ -307,6 +323,8 @@
 				1BE1CA5114D31A9100A1A6AF /* Cordova.plist in Resources */,
 				1B29AC7114D327BA007CCE6E /* www in Resources */,
 				1B432BDD15069E6E005125D1 /* MainViewController.xib in Resources */,
+				1BC4D5B6157508D7005C97D0 /* ChildBrowser.bundle in Resources */,
+				1BC4D5B9157508D7005C97D0 /* ChildBrowserViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +355,8 @@
 				1B432BDB15069E6E005125D1 /* AppDelegate.m in Sources */,
 				1B432BDC15069E6E005125D1 /* MainViewController.m in Sources */,
 				1B9677DC1506B1BC001DCD13 /* CDVDeprecated.m in Sources */,
+				1BC4D5B7157508D7005C97D0 /* ChildBrowserCommand.m in Sources */,
+				1BC4D5B8157508D7005C97D0 /* ChildBrowserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
